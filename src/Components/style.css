@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  background: #faf7f2;
+  /* background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png); */
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.subtle {
+  color: #aaa;
+}
+
+header {
+  background-color: rebeccapurple;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.resturant-name {
+  font-size: 5rem;
+  color: #faf7f2;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+}
+
+footer {
+  background-color: rebeccapurple;
+  margin-top: 4rem;
+  height: 30%;
+  color: #faf7f2;
+  width: 100%;
+}
+footer h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+}
+footer p {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.main-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1300px));
+  grid-gap: 180px;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.card-container {
+  margin: 25px auto 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+}
+
+img {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 8rem;
+}
+
+.card-body {
+  display: inline-block;
+}
+
+.card-number {
+  margin-top: 15px;
+}
+
+.card-circle {
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 12px;
+  height: 25px;
+  text-align: center;
+  width: 25px;
+}
+
+.card-author {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 60px;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.card-description {
+  font-weight: 500;
+  line-height: 22px;
+  margin: 10px 0;
+  width: 30rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+}
+
+.card-media {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* @media (max-width: 500px) {
+  .main-card-cointainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 500px));
+    grid-gap: 10px;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+} */
+
+/* ---------- Button styles ------------------ */
+
+.navbar {
+  padding-top: 50px;
+  text-align: center;
+  align-items: center;
+  margin-left: 230px;
+}
+
+.navbar h1 {
+  /* padding-bottom: 20px; */
+  text-transform: capitalize;
+}
+
+.btn-group {
+  border-radius: 1rem;
+  text-transform: capitalize;
+  margin-top: 8rem;
+  text-align: center;
+  width: 100%;
+}
+.btn-group__item {
+  border: none;
+  padding: 1.5rem 3rem;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin: 0;
+  font-size: 13px;
+  box-shadow: inset 0px 0px 0px -15px rebeccapurple;
+  transition: all 300ms ease-out;
+  text-transform: capitalize;
+}
+.btn-group__item:last-child {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.btn-group__item:first-child {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.btn-group__item:hover,
+.btn-group__item:focus {
+  color: rebeccapurple;
+  box-shadow: inset 0px -20px 0px -15px rebeccapurple;
+}
+.btn-group__item:focus {
+  outline: none;
+}
+.btn-group__item:after {
+  margin-left: 0.5rem;
+  display: inline-block;
+  color: rebeccapurple;
+  position: absolute;
+  transform: translatey(10px);
+  opacity: 0;
+  transition: all 200ms ease-out;
+}
+.btn-group__item--active:after {
+  opacity: 1;
+  transform: translatey(-2px);
+}
+
+/* ///////////////RESPONSIVENESS/////////////// */
+
+@media only screen and (max-width: 1100px) {
+  .resturant-name {
+    font-size: 4rem;
+  }
+  footer h1 {
+    font-size: 4rem;
+  }
+
+  .navbar {
+    margin-left: 0px;
+  }
+
+  .btn-group__item {
+    font-size: 12px;
+    padding: 2rem 2rem;
+  }
+  .main-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1100px));
+    grid-gap: 10px;
+    justify-content: space-between;
+  }
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 5rem;
+  }
+  .card-media {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 17px;
+  }
+  .card-description {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  .resturant-name {
+    font-size: 3rem;
+  }
+  footer h1 {
+    font-size: 3rem;
+  }
+
+  .btn-group__item {
+    font-size: 10px;
+    padding: 1.5rem 1.5rem;
+  }
+  .main-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 915px));
+    grid-gap: 10px;
+    justify-content: space-around;
+  }
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 5rem;
+  }
+  .card-media {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .card-description {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .resturant-name {
+    font-size: 2rem;
+  }
+  footer h1 {
+    font-size: 2rem;
+  }
+  footer p {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    padding-top: 10px;
+    text-align: center;
+    margin-left: 35px;
+  }
+  .btn-group__item {
+    font-size: 5px;
+    padding: 1.2rem 0.8rem;
+  }
+  .main-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 550px));
+    justify-content: space-around;
+    /* grid-gap:10px; */
+    margin-left: 50px;
+  }
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 5rem;
+  }
+  .card-media {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 15px;
+  }
+  .card-description {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .resturant-name {
+    font-size: 1rem;
+  }
+  footer h1 {
+    font-size: 1rem;
+  }
+  footer p {
+    font-size: 0.5rem;
+  }
+
+  .navbar {
+    padding-top: 1px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .btn-group__item {
+    font-size: 5px;
+    padding: 1rem 0.4rem;
+  }
+  .main-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 300px));
+    justify-content: space-around;
+    grid-gap: 10px;
+    margin-left: 10px;
+  }
+  .card {
+    background-color: #fff;
+    padding: 12px;
+    margin-top: 3rem;
+  }
+  .card-media {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 9px;
+  }
+  .card-description {
+    font-size: 0.6rem;
+  }
+}
