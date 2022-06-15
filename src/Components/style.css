@@ -38,12 +38,12 @@ header {
   font-family: "Tiro Devanagari Sanskrit", serif;
 }
 
-footer {
+.foot {
   background-color: rebeccapurple;
   margin-top: 4rem;
   height: 30%;
   color: #faf7f2;
-  width: 100%;
+  width: 100vw;
 }
 footer h1 {
   font-size: 5rem;
@@ -61,6 +61,7 @@ footer p {
   display: flex;
   justify-content: center;
   padding: 2rem;
+  width: 100%;
 }
 
 .main-card-container {
@@ -68,7 +69,7 @@ footer p {
   grid-template-columns: repeat(4, minmax(200px, 1300px));
   grid-gap: 140px;
   justify-content: space-between;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .card-container {
@@ -181,7 +182,7 @@ img {
   background-color: rgb(255, 255, 255);
   cursor: pointer;
   margin: 0;
-  font-size: 13px;
+  font-size: 15px;
   box-shadow: inset 0px 0px 0px -15px rebeccapurple;
   transition: all 300ms ease-out;
   text-transform: capitalize;
@@ -217,8 +218,7 @@ img {
 }
 
 /* ///////////////RESPONSIVENESS/////////////// */
-
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1400px) {
   .resturant-name {
     font-size: 4rem;
   }
@@ -231,12 +231,52 @@ img {
   }
 
   .btn-group__item {
-    font-size: 12px;
+    font-size: 15px;
     padding: 2rem 2rem;
   }
   .main-card-container {
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1100px));
+    grid-template-columns: repeat(4, minmax(200px, 1400px));
+    grid-gap: 10px;
+    justify-content: space-between;
+  }
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 5rem;
+  }
+  .card-media {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 17px;
+  }
+  .card-description {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .resturant-name {
+    font-size: 4rem;
+  }
+  footer h1 {
+    font-size: 4rem;
+  }
+
+  .navbar {
+    margin-left: 0px;
+  }
+
+  .btn-group__item {
+    font-size: 13px;
+    padding: 2rem 2rem;
+  }
+  .main-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1280px));
     grid-gap: 10px;
     justify-content: space-between;
   }
@@ -310,7 +350,7 @@ img {
     margin-left: 35px;
   }
   .btn-group__item {
-    font-size: 5px;
+    font-size: 7.5px;
     padding: 1.2rem 0.8rem;
   }
   .main-card-container {
@@ -337,15 +377,15 @@ img {
     font-size: 0.8rem;
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 414px) {
   .resturant-name {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   footer h1 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   footer p {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 
   .navbar {
@@ -354,12 +394,13 @@ img {
     margin-left: 0px;
   }
   .btn-group__item {
-    font-size: 5px;
-    padding: 1rem 0.4rem;
+    font-size: 6px;
+    padding: 1rem 0.65rem;
+    color: black;
   }
   .main-card-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 300px));
+    grid-template-columns: repeat(2, minmax(100px, 414px));
     justify-content: space-around;
     grid-gap: 10px;
     margin-left: 10px;
@@ -381,3 +422,94 @@ img {
     font-size: 0.6rem;
   }
 }
+@media only screen and (max-width: 360px) {
+  .resturant-name {
+    font-size: 1.5rem;
+  }
+  footer h1 {
+    font-size: 1.5rem;
+  }
+  footer p {
+    font-size: 0.7rem;
+  }
+
+  .navbar {
+    padding-top: 1px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .btn-group__item {
+    font-size: 6px;
+    padding: 1rem 0.6rem;
+    color: black;
+  }
+  .main-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 360px));
+    justify-content: space-around;
+    grid-gap: 10px;
+    margin-left: 10px;
+  }
+  .card {
+    background-color: #fff;
+    padding: 12px;
+    margin-top: 3rem;
+  }
+  .card-media {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 9px;
+  }
+  .card-description {
+    font-size: 0.6rem;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .resturant-name {
+    font-size: 1.5rem;
+  }
+  footer h1 {
+    font-size: 1.5rem;
+  }
+  footer p {
+    font-size: 0.5rem;
+  }
+
+  .navbar {
+    padding-top: 1px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .btn-group__item {
+    font-size: 5px;
+    padding: 1rem 0.5rem;
+    color: black;
+  }
+  .main-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 280px));
+    justify-content: space-around;
+    grid-gap: 10px;
+    margin-left: 10px;
+  }
+  .card {
+    background-color: #fff;
+    padding: 12px;
+    margin-top: 3rem;
+  }
+  .card-media {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 9px;
+  }
+  .card-description {
+    font-size: 0.5rem;
+  }
+}
+

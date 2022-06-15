@@ -21,7 +21,7 @@ const Resturant = () => {
       </header>
       <Navbar updateList={updateList} />
       <MenuCard menuData={menuData} />
-      <footer>
+      <footer className='foot'>
         <h1>CAFE DE ISTANBULIA</h1>
         <div className="contact-info">
           <p>Plaza No 158-A, F/F Commercial</p>

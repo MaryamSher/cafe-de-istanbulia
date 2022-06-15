@@ -16,7 +16,7 @@ const MenuCard = ({ menuData }) => {
                     {currElm.category}
                   </span>
                   <h2 className="card-title">{currElm.title}</h2>
-                  <img src={currElm.image} className="card-media " />
+                  <img src={currElm.image} className="card-media " alt=""/>
                   <br />
                   <span className="card-description ">
                     PRICE = Rs /- {currElm.price}
